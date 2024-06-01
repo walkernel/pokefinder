@@ -39,3 +39,12 @@ We use BrowserStack to test across multiple browsers:
 Check out the [Reddit post](https://www.reddit.com/r/pokemon/comments/6m7hoj/announcing_pokefinder_a_checklist_of_pokemon/) announcing Pokefinder.
 
 Made by [Giacomo Lawrance](https://giacomolaw.me).
+
+photonic sun updates were made by passing the spawn list from the photonic sun docs to an llm, giving it the following instruction after copy pasting the table from a route into the llm. the resulting command from the llm was pasted over the original info in the route. 
+
+"The document above has a list of patches of grass on a route. Each patch of grass has a list pokemon that spawn on that patch of grass,, the pokemon name is followed by the spawn percent rate, there are two numbers if the spawn rate changes between day and night. Transform the document to a list of pokemon in the following format. The pokemon name should always be in lowercase, and there should be no other text in between entries
+
+<input type="checkbox" value="POKEMONNAME"/> <span class="pkspr pkmn-POKEMONNAME"></span> PokemonName - SpawnRate day -SpawnRateNight - Patch of grass<br/>"
+
+only works on night mode because thats the only one im using 
+thanks to the og devs of this project for making everything send them support if you use this branch <3
